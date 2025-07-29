@@ -1,8 +1,8 @@
-from .callbacks import Callback, CallbackVerificationError
+from .webhooks import Webhook, WebhookVerificationError
 
 __all__ = [
-    "Callback",
-    "CallbackVerificationError",
+    "Webhook",
+    "WebhookVerificationError",
 ]
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"

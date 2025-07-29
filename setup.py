@@ -21,7 +21,9 @@ PKG_NAME = "miru_server_sdk"
 PKG_DIR = os.path.abspath(os.path.dirname(__file__))
 META_PATH = os.path.join(PKG_DIR, "src", PKG_NAME, "__init__.py")
 META_CONTENTS = read_file(META_PATH)
-PKG_REQUIRES: list[str] = []
+PKG_REQUIRES: list[str] = [
+    "svix>=1.69.0"
+]
 
 
 def find_meta(meta: str) -> str:
@@ -69,7 +71,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 setup(
     name=PKG_NAME,
     version=get_version_string(),
-    description="Miru callback verification library",
+    description="Miru server SDK & webhook library",
     author="Miru",
     author_email="ben@miruml.com",
     url="https://docs.miruml.com",
@@ -77,7 +79,7 @@ setup(
     keywords=[
         "miru",
         "miru_server_sdk",
-        "callbacks",
+        "webhooks",
     ],
     classifiers=[
         "Intended Audience :: Developers",
